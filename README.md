@@ -4,7 +4,8 @@ composer update
 
 cp .env.example .env
 
-Depois configurar o arquivo .env com os dados do banco
+//Depois configurar o arquivo .env com os dados do banco
+
 php artisan key:generate
 
 php artisan migrate --seed
