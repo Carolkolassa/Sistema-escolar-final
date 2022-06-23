@@ -236,6 +236,16 @@ return [
             'url'         => 'nacionalidades',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        [
+            'text' => 'Filmes',
+            'url'         => 'filmes',
+            'icon' => 'fas fa-fw fa-film',
+        ],
+
+
+
+
     ],
         // [
         //     'type'         => 'fullscreen-widget',
