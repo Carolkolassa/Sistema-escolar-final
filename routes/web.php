@@ -42,6 +42,10 @@ Route::group(['prefix'=>'filmes','where'=>['id'=>'[0-9]+']], function() {
     Route::get('',       ['as'=>'filmes',        'uses'=>'\App\Http\Controllers\FilmesController@index' ]);
     Route::get('create', ['as'=>'filmes.create', 'uses'=>'\App\Http\Controllers\FilmesController@create' ]);
     Route::post('store', ['as'=>'filmes.store',  'uses'=>'\App\Http\Controllers\FilmesController@store' ]);
+    Route::get('{id}/destroy',  ['as' => 'filmes.destroy', 'uses' =>  '\App\Http\Controllers\FilmesController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'filmes.edit', 'uses' =>  '\App\Http\Controllers\FilmesController@edit']);
+    Route::put('{id}/update',   ['as' => 'filmes.update', 'uses' =>  '\App\Http\Controllers\FilmesController@update']);
+
 });
 });
 

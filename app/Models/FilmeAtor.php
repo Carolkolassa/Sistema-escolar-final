@@ -12,7 +12,7 @@ class FilmeAtor extends Model
     protected $fillable = ['filme_id', 'ator_id'];
 
 public function ator() {
-    return $this->belongsTo("App\Ator");
+    return $this->belongsTo("App\Models\Ator");
 }
 
 }

@@ -12,7 +12,7 @@ class Filme extends Model
     protected $fillable = ['nome', 'categoria'];
 
 public function atores() {
-    return $this->hasMany("App\FilmeAtor");
+    return $this->hasMany("App\Models\FilmeAtor");
 }
 
 }
