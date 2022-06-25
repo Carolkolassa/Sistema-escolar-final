@@ -52,6 +52,9 @@ Route::group(['prefix'=>'professores','where'=>['id'=>'[0-9]+']], function() {
     Route::get('',       ['as'=>'professores',        'uses'=>'\App\Http\Controllers\ProfessoresController@index' ]);
     Route::get('create', ['as'=>'professores.create', 'uses'=>'\App\Http\Controllers\ProfessoresController@create' ]);
     Route::post('store', ['as' => 'professores.store', 'uses' =>  '\App\Http\Controllers\ProfessoresController@store']);
+    Route::get('{id}/destroy',  ['as' => 'professores.destroy', 'uses' =>  '\App\Http\Controllers\ProfessoresController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'professores.edit', 'uses' =>  '\App\Http\Controllers\ProfessoresController@edit']);
+    Route::put('{id}/update',   ['as' => 'professores.update', 'uses' =>  '\App\Http\Controllers\ProfessoresController@update']);
 });
 });
 
