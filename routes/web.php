@@ -56,6 +56,16 @@ Route::group(['prefix'=>'professores','where'=>['id'=>'[0-9]+']], function() {
     Route::get('{id}/edit',     ['as' => 'professores.edit', 'uses' =>  '\App\Http\Controllers\ProfessoresController@edit']);
     Route::put('{id}/update',   ['as' => 'professores.update', 'uses' =>  '\App\Http\Controllers\ProfessoresController@update']);
 });
+
+Route::group(['prefix'=>'direcoes','where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',       ['as'=>'direcoes',        'uses'=>'\App\Http\Controllers\DirecoesController@index' ]);
+    Route::get('create', ['as'=>'direcoes.create', 'uses'=>'\App\Http\Controllers\DirecoesController@create' ]);
+    Route::post('store', ['as' => 'direcoes.store', 'uses' =>  '\App\Http\Controllers\DirecoesController@store']);
+    Route::get('{id}/destroy',  ['as' => 'direcoes.destroy', 'uses' =>  '\App\Http\Controllers\DirecoesController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'direcoes.edit', 'uses' =>  '\App\Http\Controllers\DirecoesController@edit']);
+    Route::put('{id}/update',   ['as' => 'direcoes.update', 'uses' =>  '\App\Http\Controllers\DirecoesController@update']);
+
+});
 });
 
 Auth::routes();

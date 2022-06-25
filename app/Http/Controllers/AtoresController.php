@@ -21,6 +21,7 @@ class AtoresController extends Controller
     return view('atores.index', ['atores' => $atores]);
        
     }
+    
     public function create()
     {
         return view('atores.create');

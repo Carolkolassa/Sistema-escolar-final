@@ -249,6 +249,12 @@ return [
             'icon' => 'fas fa-fw fa-film',
         ],
 
+        [
+            'text' => 'Direcao',
+            'url'         => 'direcoes',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
 
     ],
         // [
