@@ -1,3 +1,5 @@
+No Mysql é necessário criar uma database chamada laraflix
+
 Ao executar, é necessário utilizar origin2
 
 composer update
