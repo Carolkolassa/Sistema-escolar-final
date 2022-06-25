@@ -47,6 +47,12 @@ Route::group(['prefix'=>'filmes','where'=>['id'=>'[0-9]+']], function() {
     Route::put('{id}/update',   ['as' => 'filmes.update', 'uses' =>  '\App\Http\Controllers\FilmesController@update']);
 
 });
+
+Route::group(['prefix'=>'professores','where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',       ['as'=>'professores',        'uses'=>'\App\Http\Controllers\ProfessoresController@index' ]);
+    Route::get('create', ['as'=>'professores.create', 'uses'=>'\App\Http\Controllers\ProfessoresController@create' ]);
+    Route::post('store', ['as' => 'professores.store', 'uses' =>  '\App\Http\Controllers\ProfessoresController@store']);
+});
 });
 
 Auth::routes();

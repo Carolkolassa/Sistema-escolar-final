@@ -243,7 +243,11 @@ return [
             'icon' => 'fas fa-fw fa-film',
         ],
 
-
+        [
+            'text' => 'Professores',
+            'url'         => 'professores',
+            'icon' => 'fas fa-fw fa-film',
+        ],
 
 
     ],
