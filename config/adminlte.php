@@ -255,6 +255,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
 
+        [
+            'text' => 'Acervo',
+            'url'         => 'acervos',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
 
     ],
         // [

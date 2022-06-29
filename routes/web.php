@@ -66,6 +66,16 @@ Route::group(['prefix'=>'direcoes','where'=>['id'=>'[0-9]+']], function() {
     Route::put('{id}/update',   ['as' => 'direcoes.update', 'uses' =>  '\App\Http\Controllers\DirecoesController@update']);
 
 });
+
+Route::group(['prefix'=>'acervos','where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',       ['as'=>'acervos',        'uses'=>'\App\Http\Controllers\AcervosController@index' ]);
+    Route::get('create', ['as'=>'acervos.create', 'uses'=>'\App\Http\Controllers\AcervosController@create' ]);
+    Route::post('store', ['as' => 'acervos.store', 'uses' =>  '\App\Http\Controllers\AcervosController@store']);
+    Route::get('{id}/destroy',  ['as' => 'acervos.destroy', 'uses' =>  '\App\Http\Controllers\AcervosController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'acervos.edit', 'uses' =>  '\App\Http\Controllers\AcervosController@edit']);
+    Route::put('{id}/update',   ['as' => 'acervos.update', 'uses' =>  '\App\Http\Controllers\AcervosController@update']);
+
+});
 });
 
 Auth::routes();
