@@ -1,7 +1,7 @@
 @extends ('layouts.default')
 @section('content')
 
-<h1> Nacionalidades</h1>
+<h1> Séries</h1>
 
 <table class=" table table-stripe table-bordered table-hover">
     <thead>

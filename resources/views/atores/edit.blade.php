@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-<h3> Editar Ator {{$ator->nome}}</h3>
+<h3> Editar Aluno: {{$ator->nome}}</h3>
 
 @if($errors->any())
 <ul class="alert alert-danger">
@@ -18,9 +18,9 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('nacionalidade_id', 'Nacionalidade') !!}
+    {!! Form::label('nacionalidade_id', 'Série') !!}
     {!! Form::select('nacionalidade_id',
-        \App\Models\Nacionalidade::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+    \App\Models\Nacionalidade::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
     $ator->nacionalidade,['class'=>'form-control', 'require']) !!}
 </div>
 
@@ -35,7 +35,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::submit('Editar Ator', ['class'=>'btn btn-primary'])!!}
+    {!! Form::submit('Editar Aluno', ['class'=>'btn btn-primary'])!!}
     {!! Form::reset('limpar', ['class'=>'btn btn-default']) !!}
 </div>
 

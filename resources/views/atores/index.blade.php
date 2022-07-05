@@ -1,6 +1,6 @@
 @extends ('layouts.default')
 @section('content')
-<h1> Atores </h1>
+<h1> Alunos </h1>
 
 {!! Form::open(['name'=>'form_name', 'route' =>'atores']) !!}
 <div class="sidebar-form">
@@ -8,8 +8,8 @@
         <input type="text" name="desc_filtro" class="form-control" style="width:80% !important;" placeholder="Pesquisa...">
         <span class="input-group-btn">
             <button type="submit" name="search" id="search-btn" class="btn btn default"><i class="fa fa-search"></i></button>
-</span>
-</div>
+        </span>
+    </div>
 </div>
 
 {!! Form::close() !!}
@@ -19,7 +19,7 @@
     <thead>
         <th>Nome</th>
         <th>Data de Nascimento</th>
-        <th>Nacionalidade</th>
+        <th>Série</th>
         <th>Ações</th>
 
     </thead>
@@ -28,8 +28,8 @@
         <tr>
             <td>{{$ator->nome}}</td>
             <td>{{Carbon\Carbon::parse($ator->dt_nascimento)->format('d/m/Y')}}</td>
-            
-            <td>{{ isset($ator->nacionalidade->descricao) ? $ator->nacionalidade->descricao : "Nacionalidade nao informada"}}</td>
+
+            <td>{{ isset($ator->nacionalidade->descricao) ? $ator->nacionalidade->descricao : "Série não informada"}}</td>
             <td>
                 <a href="{{route('atores.edit', ['id'=>$ator->id])}}" class="btn-sm btn-success">Editar</a>
                 <a href="#" onclick="return ConfirmaExclusao({{$ator->id}})" class="btn-sm btn-danger">Remover</a>

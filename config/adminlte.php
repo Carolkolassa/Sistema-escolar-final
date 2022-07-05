@@ -232,7 +232,7 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Disciplinas',
+            'text' => 'Série',
             'url'         => 'nacionalidades',
             'icon' => 'fas fa-fw fa-university',
         ],

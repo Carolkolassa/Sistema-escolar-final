@@ -15,14 +15,16 @@ class NacionalidadeSeeder extends Seeder
      */
     public function run()
     {
-        Nacionalidade::create(['descricao' => 'Brasileiro(a)']);
-        Nacionalidade::create(['descricao' => 'Argentino(a)']);
-        Nacionalidade::create(['descricao' => 'Chines(a)']);
-        Nacionalidade::create(['descricao' => 'Turco(a)']);
-        Nacionalidade::create(['descricao' => 'Boliviano(a)']);
-        Nacionalidade::create(['descricao' => 'Ingles(a)']);
-        Nacionalidade::create(['descricao' => 'Groinlandes(a)']);
-        Nacionalidade::create(['descricao' => 'Indiano(a)']);
-        Nacionalidade::create(['descricao' => 'Russo(a)']);
+        Nacionalidade::create(['descricao' => 'Pré-A']);
+        Nacionalidade::create(['descricao' => 'Pré-B']);
+        Nacionalidade::create(['descricao' => '1ª Série']);
+        Nacionalidade::create(['descricao' => '2ª Série']);
+        Nacionalidade::create(['descricao' => '3ª Série']);
+        Nacionalidade::create(['descricao' => '4ª Série']);
+        Nacionalidade::create(['descricao' => '5ª Série']);
+        Nacionalidade::create(['descricao' => '6ª Série']);
+        Nacionalidade::create(['descricao' => '7ª Série']);
+        Nacionalidade::create(['descricao' => '8ª Série']);
+        Nacionalidade::create(['descricao' => '9ª Série']);
     }
 }

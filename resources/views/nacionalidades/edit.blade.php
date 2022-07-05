@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-<h3> Editando Nacionalidade: {{$nacionalidade->nome}}</h3>
+<h3> Editar Série</h3>
 
 @if($errors->any())
 <ul class="alert alert-danger">
@@ -18,7 +18,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::submit('Editar Nacionalidade', ['class'=>'btn btn-primary'])!!}
+    {!! Form::submit('Editar Série', ['class'=>'btn btn-primary'])!!}
     {!! Form::reset('limpar', ['class'=>'btn btn-default']) !!}
 </div>
 
