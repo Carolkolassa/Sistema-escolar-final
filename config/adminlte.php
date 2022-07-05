@@ -261,6 +261,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
 
+        [
+            'text' => 'Calendário Acadêmico',
+            'url'         => 'calendarios',
+            'icon' => 'fas fa-fw fa-calendar',
+        ],
 
     ],
         // [
