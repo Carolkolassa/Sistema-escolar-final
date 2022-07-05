@@ -82,6 +82,15 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('{id}/edit',     ['as' => 'materiais.edit', 'uses' =>  '\App\Http\Controllers\MateriaisController@edit']);
         Route::put('{id}/update',   ['as' => 'materiais.update', 'uses' =>  '\App\Http\Controllers\MateriaisController@update']);
     });
+    
+    Route::group(['prefix'=>'calendarios','where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',       ['as'=>'calendarios',        'uses'=>'\App\Http\Controllers\CalendariosController@index' ]);
+    Route::get('create', ['as'=>'calendarios.create', 'uses'=>'\App\Http\Controllers\CalendariosController@create' ]);
+    Route::post('store', ['as' => 'calendarios.store', 'uses' =>  '\App\Http\Controllers\CalendariosController@store']);
+    Route::get('{id}/destroy',  ['as' => 'calendarios.destroy', 'uses' =>  '\App\Http\Controllers\CalendariosController@destroy']);
+    Route::get('{id}/edit',     ['as' => 'calendarios.edit', 'uses' =>  '\App\Http\Controllers\CalendariosController@edit']);
+    Route::put('{id}/update',   ['as' => 'calendarios.update', 'uses' =>  '\App\Http\Controllers\CalendariosController@update']);
+});
 });
 
 Auth::routes();
